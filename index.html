@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Layout</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container for the flex items */
+        .container {
+            display: flex;
+            flex-direction: column; /* Default: stack items vertically */
+        }
+
+        /* First container styles */
+        .container-1 {
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        /* Second container styles */
+        .container-2 {
+            padding: 20px;
+            background-color: #e0e0e0;
+        }
+
+        /* Media query for screens with a maximum width of 375px */
+        @media (max-width: 375px) {
+            .container {
+                flex-direction: column; /* Change to a column layout */
+            }
+
+            .container-1 {
+                order: 2; /* Change the order to place container-1 below container-2 */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="container-1">
+        <h2>Container 1</h2>
+        <p>This is the content of Container 1.</p>
+    </div>
+    <div class="container-2">
+        <h2>Container 2</h2>
+        <p>This is the content of Container 2.</p>
+    </div>
+</div>
+
+</body>
+</html>
